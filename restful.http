@@ -1,0 +1,64 @@
+@BASE_URL = http://localhost:3000/api
+
+GET {{BASE_URL}}
+
+###
+GET {{BASE_URL}}/users
+Authorization: Bearer 
+
+###
+GET {{BASE_URL}}/users/12
+
+###
+GET {{BASE_URL}}/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDg1NDJiZTUyNGU3YjQ0NmNhNmE2YzgiLCJpYXQiOjE2MTkzNDYyNzEsImV4cCI6MTYxOTM0OTg3MX0.QZWInXTBmuT9IZVDieNyttHZ1OeXMjCUYj18R5zTCB8
+
+###
+POST {{BASE_URL}}/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDgyOWFlOGQ0Y2JhYzQzODgxODhiMDciLCJpYXQiOjE2MTkyOTc0OTAsImV4cCI6MTYxOTMwMTA5MH0.hjLMS7bQKg3IHuuvWax-q7xIusyWYyJHQXKMdhuAO7U
+
+{
+    "name": "suat",
+    "email": "suat@gmail.com",
+    "userName": "suatbaskan",
+    "password": "suat123"
+}
+
+###
+POST {{BASE_URL}}/users/login
+Content-Type: application/json
+
+{
+    "email": "suat@gmail.com",
+    "password": "suat123"
+}
+
+###
+PATCH {{BASE_URL}}/users/607c4244aba9eb1d08337d85
+Content-Type: application/json
+
+{
+    "userName": "sedibebesi"
+}
+
+###
+PATCH {{BASE_URL}}/users/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDg1NDJiZTUyNGU3YjQ0NmNhNmE2YzgiLCJpYXQiOjE2MTkzNDk1MzksImV4cCI6MTYxOTM1MzEzOX0.ADUb2qFgdv_1lnkTLGiyYFAdMQ_Aler_6TA_oB0WZiQ
+
+{
+    "name": "sodabebe"
+}
+
+###
+DELETE {{BASE_URL}}/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDg1MzY1YjhiODI4YjNkNzA2NzFjMGIiLCJpYXQiOjE2MTkzNDQwMjgsImV4cCI6MTYxOTM0NzYyOH0.beKK71UaliVXg0JMaVD88mGMJGh42c9lsBse0AFq6g8
+
+###
+DELETE {{BASE_URL}}/users/607c429908d56e474c20943a
+Content-Type: application/json
+
+###
+GET {{BASE_URL}}/users/deleteAll
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDg1MzY1YjhiODI4YjNkNzA2NzFjMGIiLCJpYXQiOjE2MTkzNDMwNjQsImV4cCI6MTYxOTM0NjY2NH0.HPYroYbLmOZAr1lJ8neduJ1Yv1AMRVIm22IPwGUNcE8
